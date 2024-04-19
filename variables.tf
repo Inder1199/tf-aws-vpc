@@ -29,21 +29,3 @@ variable "vpc_cidr" {
     error_message = "CIDR size must be at least /20 and no larger than /16"
   }
 }
-
-variable "public_subnet_cidrs" {
- type        = list(string)
- description = "Public Subnet CIDR values"
- default     = ["10.0.1.0/20", "10.0.2.0/20", "10.0.3.0/20"]
-}
- 
-variable "private_subnet_cidrs" {
- type        = list(string)
- description = "Private Subnet CIDR values"
- default     = ["10.0.4.0/20", "10.0.5.0/20", "10.0.6.0/20"]
-}
-
-variable "azs" {
- type        = list(string)
- description = "Availability Zones"
- default     = ["eu-central-1a"]
-}
